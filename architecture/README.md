@@ -1,2 +1,10 @@
 # Astra System Architecture
-This folder will contain system diagrams and technical architecture visuals.
+
+Main system flow:
+
+Mobile App
+→ Location Services
+→ Cloud Backend
+→ AI Risk Detection Engine
+→ Alert & Notification System
+→ Trusted Safety Circle
