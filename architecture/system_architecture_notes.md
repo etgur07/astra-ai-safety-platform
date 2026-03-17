@@ -1,10 +1,18 @@
-# Astra System Architecture
+# Astra Database Schema Notes
 
-Main system flow:
+## Core Tables
 
-Mobile App
-→ Location Services
-→ Cloud Backend
-→ AI Risk Detection Engine
-→ Alert & Notification System
-→ Trusted Safety Circle
+- users
+- safety_circle_contacts
+- panic_alerts
+- location_sessions
+- safety_checkins
+
+## Purpose
+
+This schema supports the Astra MVP backend for:
+- user accounts
+- trusted contacts
+- emergency alert creation
+- temporary location sharing
+- safety check-in tracking
