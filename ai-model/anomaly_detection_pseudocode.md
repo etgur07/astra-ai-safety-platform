@@ -45,3 +45,7 @@ Detect unusual movement or safety-related anomalies using user activity and loca
 
 7. If no response:
    → send alert to Safety Circle
+
+IF risk_score > HIGH_THRESHOLD:
+    trigger_panic()
+    start_evidence_capture()
