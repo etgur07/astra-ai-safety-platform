@@ -254,6 +254,24 @@ Purpose:
 
 ---
 
+## 8. AI Risk Evaluation
+
+### POST /ai/risk-score
+
+Evaluates user safety risk based on behavioral data.
+
+Request body:
+- movement_speed
+- check_in_status
+- time_of_day
+- safety_mode
+
+---
+
+Response:
+- risk_score
+- risk_level (low / medium / high)
+
 ## MVP API Goal
 
 The Astra MVP API is designed to support the minimum functional workflow required to validate the product:
