@@ -1,10 +1,12 @@
-"""
-Astra - Panic Alert Prototype
-
-This module simulates the core panic alert logic of the Astra safety system.
-"""
-
 from datetime import datetime
+
+
+def evaluate_risk():
+    """
+    Simulated AI risk evaluation.
+    In real system, this would call the Python risk model.
+    """
+    return "HIGH_RISK"
 
 
 def trigger_panic(user_id, latitude, longitude, message=None):
@@ -12,6 +14,20 @@ def trigger_panic(user_id, latitude, longitude, message=None):
     Simulates a panic alert being triggered by a user.
     """
 
+    # Step 1: AI risk evaluation
+    risk_level = evaluate_risk()
+
+    print(f"AI Risk Level: {risk_level}")
+
+    # Step 2: Only escalate if high risk
+    if risk_level != "HIGH_RISK":
+        print("Risk not high → no escalation")
+        return {
+            "success": False,
+            "reason": "Risk level too low"
+        }
+
+    # Step 3: Create alert
     alert = {
         "user_id": user_id,
         "latitude": latitude,
@@ -21,7 +37,7 @@ def trigger_panic(user_id, latitude, longitude, message=None):
         "created_at": datetime.utcnow().isoformat()
     }
 
-    # Simulated safety contacts
+    # Step 4: Simulated safety contacts
     contacts = [
         {"name": "Mom", "phone": "+123456789"},
         {"name": "Friend", "phone": "+987654321"}
@@ -35,7 +51,8 @@ def trigger_panic(user_id, latitude, longitude, message=None):
     return {
         "success": True,
         "alert": alert,
-        "contacts_notified": len(contacts)
+        "contacts_notified": len(contacts),
+        "risk_level": risk_level
     }
 
 
@@ -47,10 +64,3 @@ if __name__ == "__main__":
         message="I feel unsafe"
     )
     print(result)
-
-
-# AI risk evaluation simulation
-risk_level = "HIGH_RISK"
-
-if risk_level == "HIGH_RISK":
-    print("AI detected high risk → escalating alert")
