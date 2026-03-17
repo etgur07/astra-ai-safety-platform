@@ -129,6 +129,17 @@ is_guardian_of(user_id)
 
 ---
 
+## 🔐 Identity Verification
+
+- Selfie verification
+- ID verification (optional)
+- Verified user badge
+- Trust-based safety system
+
+
+--- 
+
+
 # Realtime Features
 
 The system supports real-time updates for:
