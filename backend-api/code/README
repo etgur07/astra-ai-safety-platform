@@ -1,0 +1,13 @@
+## Prototype Backend Code
+
+This repository includes a minimal Python-based backend prototype demonstrating the core logic of the Astra safety system.
+
+Location:
+`/backend-api/code/`
+
+Includes:
+- panic alert simulation
+- check-in monitoring logic
+- data model structure
+
+This prototype serves as a proof-of-implementation for the Astra MVP.
