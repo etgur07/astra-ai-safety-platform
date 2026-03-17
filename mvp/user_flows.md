@@ -2,11 +2,13 @@
 
 ## Flow 1 – Panic Alert
 
-1. User opens the Astra app
-2. User presses the Panic Alert button
-3. The system captures the user's current location
-4. An alert is sent to trusted Safety Circle contacts
-5. Contacts receive location and emergency notification
+1. User opens the Astra app  
+2. User presses the Panic Alert button  
+3. The system captures the user's current location  
+4. The AI system evaluates risk level  
+5. If risk is high:
+   - an alert is sent to trusted Safety Circle contacts  
+6. Contacts receive location and emergency notification  
 
 ---
 
