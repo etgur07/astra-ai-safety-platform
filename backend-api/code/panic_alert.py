@@ -47,3 +47,10 @@ if __name__ == "__main__":
         message="I feel unsafe"
     )
     print(result)
+
+
+# AI risk evaluation simulation
+risk_level = "HIGH_RISK"
+
+if risk_level == "HIGH_RISK":
+    print("AI detected high risk → escalating alert")
