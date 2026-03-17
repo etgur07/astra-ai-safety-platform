@@ -109,6 +109,49 @@ Security model uses:
 - Row Level Security
 - Guardian access control
 
+---
+
+## Emergency Evidence Layer
+
+The Astra system includes an evidence capture module for high-risk situations.
+
+Capabilities:
+- audio recording
+- video recording
+- photo capture
+- timestamp tagging
+- location tagging
+- secure upload
+
+Purpose:
+To preserve emergency evidence that may later support safety investigations or legal documentation.
+
+---
+
+## Trusted Contact Alert Layer
+
+The system includes a trusted contact response interface.
+
+Trusted contacts can:
+- receive incoming alerts
+- view live location
+- monitor risk status
+- see evidence capture status
+- open live chat
+- call the user
+- call 911
+
+---
+
+## Identity Verification Layer
+
+Astra supports identity verification to improve trust and safety.
+
+Capabilities:
+- selfie verification
+- optional ID verification
+- verified badge
+
 Policies:
 Users can only modify their own records.
 
