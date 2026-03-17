@@ -1,26 +1,49 @@
-# Astra API Endpoints
+# Astra MVP Backend API
 
-## Health
-GET /health
+## Authentication / Profile
+- signUp
+- signIn
+- signOut
+- getProfile
+- updateProfile
 
-## Users
-POST /users
-GET /users/{id}
-
-## Safety Circle
-POST /contacts
-GET /contacts/{user_id}
-DELETE /contacts/{id}
+## Safety Contacts
+- getSafetyContacts
+- addSafetyContact
+- deleteSafetyContact
 
 ## Panic Alerts
-POST /panic-alert
-GET /panic-alerts/{user_id}
+- triggerPanic
+- getActiveAlerts
+- resolveAlert
 
-## Location Sharing
-POST /share-location
-GET /location-session/{id}
-POST /end-location-session
+## Location Sessions
+- startLocationSession
+- updateLocation
+- endLocationSession
 
 ## Safety Check-Ins
-POST /safety-checkin
-GET /safety-checkins/{user_id}
+- createCheckIn
+- respondToCheckIn
+- getPendingCheckIns
+
+## Realtime
+- subscribeToAlerts
+- subscribeToLocationUpdates
+
+---
+
+## Edge Functions
+
+### trigger-panic
+Purpose:
+- creates a panic alert
+- fetches emergency contacts
+- fetches profile data
+- logs notification intent
+
+### check-in-monitor
+Purpose:
+- finds overdue check-ins
+- identifies contacts to notify
+- expires stale location sessions
