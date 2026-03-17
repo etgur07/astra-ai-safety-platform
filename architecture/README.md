@@ -1,2 +1,5 @@
-# Astra System Architecture
-This folder will contain system diagrams and technical architecture visuals.
+## System Architecture
+
+Below is the database architecture of the Astra safety platform built using Supabase:
+
+![Astra Database Diagram](architecture/database-diagram.png)
