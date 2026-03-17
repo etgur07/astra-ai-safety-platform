@@ -38,6 +38,11 @@ Each factor contributes to a cumulative score.
 - 0–30 → Low risk
 - 31–60 → Medium risk
 - 61+ → High risk
+
+If risk score exceeds threshold:
+- trigger panic alert
+- initiate evidence capture
+  
 ---
 
 ## Phase 2: Machine Learning (Future)
