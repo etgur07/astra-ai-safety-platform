@@ -1,40 +1,25 @@
 # Astra Risk Detection Flow
 
-This diagram explains how Astra detects and responds to potential safety risks.
+```mermaid
+flowchart TD
 
----
+A[User activates Safety Mode] --> B[Collect location & activity data]
+B --> C[Analyze movement patterns]
 
-## Flow Overview
+C --> D{Anomaly detected?}
 
-1. User activates Safety Mode
-2. System starts tracking location and activity
-3. AI evaluates movement patterns
-4. System detects anomalies:
-   - route deviation
-   - unexpected stop
-   - inactivity
-   - missed check-in
-5. Risk score increases
-6. If threshold reached:
-   → Astra prompts user ("Are you safe?")
-7. If no response:
-   → alert sent to Safety Circle
+D -- No --> E[Continue monitoring]
 
----
+D -- Yes --> F[Increase risk score]
 
-## Key Components
+F --> G{Risk threshold reached?}
 
-- real-time data collection
-- behavioral analysis
-- risk scoring engine
-- escalation logic
+G -- No --> E
 
----
+G -- Yes --> H[Prompt user: Are you safe?]
 
-## Concept
+H --> I{User responds?}
 
-Astra transforms safety systems from:
+I -- Yes --> J[Mark as safe]
 
-Reactive → Proactive  
-Manual → Intelligent  
-User-triggered → AI-assisted
+I -- No --> K[Trigger alert to Safety Circle]
