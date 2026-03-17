@@ -141,6 +141,20 @@ Supabase Realtime
 
 ---
 
+### Emergency Evidence Capture
+
+The system supports automatic and manual evidence collection during emergency situations.
+
+Capabilities:
+- audio recording
+- video recording
+- photo capture
+- automatic trigger during high-risk detection
+- secure cloud storage
+- timestamp and location tagging
+
+---
+
 # MVP Goal
 
 The Astra MVP demonstrates the ability to:
