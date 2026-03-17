@@ -14,12 +14,14 @@
 
 ## Flow 2 – Safety Check-In
 
-1. User activates Safety Mode
-2. The system starts a timer
+1. User activates Safety Mode  
+2. The system starts a timer  
 3. After the timer expires, Astra asks:
-   "Are you safe?"
-4. If the user confirms safety → session ends
-5. If there is no response → alert is triggered
+   "Are you safe?"  
+4. AI evaluates user response and behavior  
+5. If the user confirms safety → session ends  
+6. If there is no response → risk score increases  
+7. If risk threshold is reached → alert is triggered
 
 ---
 
