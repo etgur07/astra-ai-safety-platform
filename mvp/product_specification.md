@@ -119,7 +119,7 @@ Guardian users can read safety data for monitored users.
 
 The Astra system includes an AI-driven risk detection component implemented in Python.
 
-This layer is responsible for analyzing behavioral patterns and detecting potential safety risks.
+This AI layer is already partially implemented in the MVP using rule-based scoring and Python-based logic, enabling early-stage proactive safety detection.
 
 ### Technology
 - Python
