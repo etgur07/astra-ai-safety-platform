@@ -1,28 +1,47 @@
 # Astra AI Risk Detection – Pseudocode
 
-Goal:
-Detect unusual movement or safety-related anomalies using mobile location and activity data.
+## Goal
+Detect unusual movement or safety-related anomalies using user activity and location data.
 
-Inputs:
+---
+
+## Inputs
+
 - GPS coordinates
-- Timestamp
-- Movement speed
-- Route history
-- Safety mode status
-- Check-in response status
+- timestamp
+- movement speed
+- route history
+- safety mode status
+- check-in response status
 
-Output:
+---
+
+## Output
+
 - risk score
 - safety prompt
-- contact alert trigger
+- emergency alert trigger
 
-Example logic:
-1. User enables Safety Mode
-2. App collects periodic location updates
-3. System compares live movement to expected route
-4. If user stops unexpectedly or misses a check-in:
-   - risk score increases
-5. If risk score crosses threshold:
-   - Astra asks: "Are you safe?"
-6. If no response:
-   - Astra sends an alert to Safety Circle
+---
+
+## Logic
+
+1. User activates Safety Mode
+
+2. System collects periodic location updates
+
+3. Compare current movement with expected route
+
+4. Detect anomalies:
+   - sudden stop
+   - route deviation
+   - inactivity
+   - missed check-in
+
+5. Increase risk score based on conditions
+
+6. If risk score exceeds threshold:
+   → trigger safety prompt ("Are you safe?")
+
+7. If no response:
+   → send alert to Safety Circle
