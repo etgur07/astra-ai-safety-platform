@@ -35,5 +35,9 @@ The frontend/backend communication layer is implemented in:
 - Guardian access logic via `is_guardian_of(user_id)`
 - Realtime enabled for panic alerts and location sessions
 
+## AI Integration
+
+The backend integrates with a Python-based risk detection engine that evaluates user behavior and supports proactive safety decisions.
+
 ## Status
 This backend represents the Astra MVP architecture and serves as the technical foundation for future mobile app integration.
