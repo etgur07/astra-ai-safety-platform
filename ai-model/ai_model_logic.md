@@ -26,20 +26,18 @@ Each factor contributes to a cumulative score.
 ## Risk Scoring Example
 
 | Condition | Score |
-|----------|------|
-| Missed check-in | +2 |
-| Panic history | +3 |
-| Late night activity | +1 |
-| Route deviation | +2 |
-
+|----------|------:|
+| Missed check-in | +40 |
+| Low movement / inactivity | +20 |
+| Late night activity | +15 |
+| Safety mode active | +10 |
 ---
 
 ## Threshold Logic
 
-- 0–2 → Low risk
-- 3–4 → Medium risk
-- 5+ → High risk
-
+- 0–30 → Low risk
+- 31–60 → Medium risk
+- 61+ → High risk
 ---
 
 ## Phase 2: Machine Learning (Future)
