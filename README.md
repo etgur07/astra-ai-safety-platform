@@ -1,176 +1,251 @@
-# Astra MVP Scope
+# Astra – AI-Powered Personal Safety Platform
 
-Astra is a proactive personal safety platform designed to protect women and teenage girls through trusted safety networks, real-time monitoring, and AI-assisted risk detection.
+Astra is an AI-driven personal safety platform designed to provide real-time protection, proactive risk detection, and emergency response support.
 
-This document defines the Minimum Viable Product (MVP) scope and core system capabilities.
-
----
-
-# Core MVP Features
-
-## 1. User Accounts
-
-Users can create secure accounts and manage their personal profiles.
-
-Capabilities:
-- Email authentication
-- Profile creation
-- Role assignment (user, teen, guardian)
-
-Database:
-profiles
+Inspired by systems like KADES, Astra extends safety beyond government-controlled environments by integrating artificial intelligence, real-time data, and trusted social networks into a unified safety ecosystem.
 
 ---
 
-## 2. Safety Circle (Trusted Contacts)
+## 🌍 Vision
 
-Users can define trusted contacts who will receive emergency alerts.
-
-Capabilities:
-- Add safety contact
-- Remove safety contact
-- Mark contacts as emergency contacts
-- Store phone and email information
-
-Database:
-safety_contacts
+Astra aims to become a proactive safety intelligence system that protects individuals—especially women and teenagers—by detecting potential danger before it escalates and enabling rapid, intelligent response during emergencies.
 
 ---
 
-## 3. Panic Alerts
+## 🚨 Core Features
 
-A one-tap emergency alert system that instantly notifies trusted contacts.
+### 🔴 Panic Alert System
+- One-tap emergency trigger
+- Instantly notifies trusted contacts
+- Sends live GPS location
 
-Capabilities:
-- Create panic alert
-- Capture GPS location
-- Attach optional message
-- Notify safety contacts
+### 📞 Call 911 Integration
+- Direct emergency call access
+- Suggested escalation during high-risk events
 
-Database:
-panic_alerts
+### 👥 Safety Circle (Trusted Contacts)
+- Add and manage emergency contacts
+- Multi-channel alert delivery (push, SMS, call)
 
-Edge Function:
-trigger-panic
+### 📍 Real-Time Location Sharing
+- Temporary live location sessions
+- Share movement with trusted contacts
+- Automatic expiration
 
----
+### ⏱ Safety Check-In System
+- Scheduled safety confirmations
+- Missed check-ins trigger escalation
 
-## 4. Location Sharing
+### 🛡 Guardian Mode
+- Designed for teens and monitored users
+- Guardian-level visibility and alerts
 
-Users can temporarily share their real-time location with trusted contacts.
-
-Capabilities:
-- Start location session
-- Update location in real time
-- End location session
-- Automatic session expiration
-
-Database:
-location_sessions
-
-Realtime updates enabled.
-
----
-
-## 5. Safety Check-ins
-
-Users can schedule check-ins to confirm their safety status.
-
-Capabilities:
-- Create scheduled check-in
-- Respond with:
-  - safe
-  - need_help
-- Detect missed check-ins
-- Trigger escalation if no response
-
-Database:
-check_ins
-
-Edge Function:
-check-in-monitor
+### 🔐 Identity Verification
+- Selfie and optional ID verification
+- Improves trust within safety network
 
 ---
 
-## 6. AI Risk Detection (MVP Layer)
+## 🧠 AI-Powered Safety Layer
 
-Astra includes a lightweight AI-based risk detection system implemented using rule-based logic.
+Astra integrates a Python-based AI risk detection engine.
 
-Purpose:
-To enable proactive safety detection without requiring manual user input.
+### AI Capabilities:
+- Detect unusual movement patterns
+- Identify missed check-ins
+- Analyze inactivity and time-based risk
+- Evaluate behavioral anomalies
 
-Capabilities:
-- evaluate missed check-ins
-- detect inactivity or abnormal movement
-- assess time-based risk (e.g., late-night activity)
-- generate dynamic risk scores
-- trigger escalation when thresholds are reached
+### Risk Levels:
+- Low → continue monitoring
+- Medium → safety prompt ("Are you safe?")
+- High → emergency escalation
 
-Technology:
+---
+
+## 🎥 Evidence Capture System
+
+Astra includes a built-in emergency evidence system:
+
+- Audio recording
+- Video recording
+- Photo capture
+- Automatic capture during high-risk events
+- Timestamp and GPS tagging
+- Secure cloud storage
+
+This feature enables users to preserve critical evidence during emergency situations.
+
+---
+
+## 💬 Communication Layer
+
+### Live Chat
+- Real-time communication with trusted contacts
+
+### AI Safety Assistant
+- Chat + voice interaction
+- Hands-free support in emergency scenarios
+
+### Voice Input Support
+- Users can interact without typing
+- Critical for high-stress situations
+
+---
+
+## 🚨 Trusted Contact Alert System
+
+When an emergency is triggered, trusted contacts receive:
+
+- Emergency alert notification
+- Live location access
+- Risk level status
+- Evidence capture indicators
+- Missed check-in alerts
+
+### Available Actions:
+- View live location
+- Call the user
+- Call 911
+- Open live chat
+
+---
+
+## 🧩 System Architecture
+
+### Backend
+- Supabase (PostgreSQL)
+- Row Level Security (RLS)
+- Auth system with user profiles
+
+### Edge Functions (Deno)
+- trigger-panic
+- check-in-monitor
+
+### AI Layer
 - Python-based risk scoring engine
+- FastAPI microservice (planned)
 
-Integration:
-- AI evaluates behavioral data from backend
-- supports proactive alerts and user prompts
+### Frontend
+- React + TypeScript
+- Mobile-first UI design
 
----
-
-## 7. Guardian Mode
-
-Guardian users (e.g., parents or trusted adults) can monitor safety data.
-
-Capabilities:
-- View active panic alerts
-- View real-time location sessions
-- Monitor safety status
-
-Logic:
-is_guardian_of(user_id)
+### Realtime
+- Supabase Realtime subscriptions
 
 ---
 
-## 🔐 Identity Verification
+## 🔔 Notification Architecture
 
-- Selfie verification
-- ID verification (optional)
-- Verified user badge
-- Trust-based safety system
+Multi-channel alert system:
 
+1. Push Notification
+2. In-app alert
+3. SMS fallback
+4. Voice call escalation
 
---- 
-
-
-# Realtime Features
-
-The system supports real-time updates for:
-
-- panic alerts
-- location sessions
-
-Technology:
-Supabase Realtime
+Ensures delivery even in critical scenarios.
 
 ---
 
-# MVP Goal
+## 🔄 User Flows
 
-The Astra MVP demonstrates the ability to:
+### Panic Flow
+User → Panic Button → Alert Created → Contacts Notified → AI Evaluates → Escalation
 
-- create a trusted safety network  
-- enable instant emergency alerts  
-- share location in real time  
-- monitor user safety behavior  
-- detect potential risk using AI  
-- escalate alerts proactively  
+### Check-In Flow
+Timer → No Response → Risk Increase → Alert Triggered
+
+### AI Flow
+Behavior Data → Risk Engine → Decision Output → System Action
 
 ---
 
-# Future Enhancements
+## 📊 Database Structure
 
-The following features are planned for future versions:
+Core tables:
 
-- SMS and push notification integration  
-- machine learning-based anomaly detection  
-- route deviation analysis  
-- wearable device integration  
-- predictive safety analytics  
+- profiles
+- safety_contacts
+- panic_alerts
+- location_sessions
+- check_ins
+
+Additional:
+
+- evidence_records
+- alert_recipients
+- verification_records
+
+---
+
+## 🎯 System Goals
+
+Astra is designed to:
+
+- Respond instantly to emergency events
+- Detect risk proactively using AI
+- Preserve critical evidence
+- Protect user privacy
+- Ensure reliable communication
+- Support vulnerable populations
+
+---
+
+## 🔬 Future Development
+
+- Machine learning-based anomaly detection
+- Predictive safety modeling
+- Route deviation analysis
+- Safer route recommendations
+- Integration with public safety systems (NG911)
+
+---
+
+## ⚖️ Ethical Considerations
+
+Astra prioritizes:
+
+- user privacy
+- secure data handling
+- consent-based data collection
+- responsible AI usage
+
+---
+
+## 🚀 Positioning
+
+Astra is not just a panic button app.
+
+It is:
+
+> An AI-powered personal safety intelligence platform designed for real-world risk detection and emergency response.
+
+---
+
+## 📁 Project Structure
+
+astra-ai-safety-platform/
+│
+├── mvp/
+├── backend-api/
+├── ai-model/
+├── architecture/
+├── research/
+├── docs/
+│
+└── README.md
+
+
+---
+
+## 👩‍💻 Author
+
+Developed as part of an advanced safety technology initiative combining AI, real-time systems, and human-centered design.
+
+---
+
+## 📌 Status
+
+MVP + AI integration + system architecture complete  
+Actively expanding toward research, deployment, and real-world applications
