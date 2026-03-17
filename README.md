@@ -225,12 +225,7 @@ It is:
 
 ## 📁 Project Structure
 
-├── mvp/              # product scope, features, flows
-├── backend-api/      # API design, database, services
-├── ai-model/         # AI risk detection logic
-├── architecture/     # system diagrams and flows
-├── research/         # papers, EB2 documentation
-├── docs/             # supporting documentation
+<pre> ## 📁 Project Structure ``` astra-ai-safety-platform/ │ ├── mvp/ ├── backend-api/ ├── ai-model/ ├── architecture/ ├── research/ ├── docs/ │ └── README.md ``` </pre>
 
 ---
 
