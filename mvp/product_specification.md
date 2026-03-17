@@ -1,45 +1,145 @@
 # Astra Product Specification
 
-## Product Overview
+Astra is a personal safety platform focused on providing rapid emergency communication and safety monitoring tools.
 
-Astra is an AI-enhanced mobile safety platform designed to protect women and teenage girls through real-time alerts, trusted safety circles, and intelligent risk detection.
-
-The platform aims to provide users with tools that increase situational awareness and enable faster communication during potentially unsafe situations.
+The system combines mobile interaction, realtime location sharing, and safety escalation workflows.
 
 ---
 
-## Target Users
+# Product Vision
 
-Primary users:
-- Women navigating urban environments
-- Teenage girls
+To create a scalable digital safety network that enables individuals to instantly alert trusted contacts during dangerous situations.
 
-Secondary users:
-- Parents or guardians
-- Trusted friends and family members
-
----
-
-## Core MVP Functionality
-
-1. Panic Alert System
-2. Safety Circle Contact Management
-3. Real-Time Location Sharing
-4. Safety Check-In Timer
-5. Emergency Alert Escalation
+Primary target users:
+- women
+- teenage girls
+- parents monitoring teen safety
 
 ---
 
-## Technology Components
+# Key System Components
 
-Mobile Application  
-GPS Location Services  
-Cloud Backend API  
-Safety Notification System  
-AI Risk Detection (future phase)
+## User Identity Layer
+
+Authentication system that links user accounts to safety networks.
+
+Technology:
+Supabase Auth
+
+Functions:
+- signUp
+- signIn
+- signOut
+- profile creation
 
 ---
 
-## Project Stage
+## Safety Network Layer
 
-Early-stage research prototype and MVP architecture.
+Users define trusted contacts who will receive emergency notifications.
+
+Functions:
+- addSafetyContact
+- deleteSafetyContact
+- getSafetyContacts
+
+Database:
+safety_contacts
+
+---
+
+## Emergency Alert System
+
+The panic alert system allows users to immediately signal distress.
+
+Trigger:
+User presses panic button.
+
+System actions:
+1. Create panic_alert record
+2. Fetch emergency contacts
+3. Log notification event
+
+Edge Function:
+trigger-panic
+
+---
+
+## Location Tracking System
+
+Users can share temporary real-time location.
+
+Functions:
+- startLocationSession
+- updateLocation
+- endLocationSession
+
+Database:
+location_sessions
+
+Realtime subscription:
+subscribeToLocationUpdates
+
+---
+
+## Safety Check-in System
+
+Users schedule check-ins to confirm safety.
+
+If a user does not respond before the deadline, the system flags the event.
+
+Edge Function:
+check-in-monitor
+
+Database:
+check_ins
+
+Status values:
+- safe
+- need_help
+- no_response
+
+---
+
+# Security Architecture
+
+Security model uses:
+
+- Supabase Auth
+- Row Level Security
+- Guardian access control
+
+Policies:
+Users can only modify their own records.
+
+Guardian users can read safety data for monitored users.
+
+---
+
+# Technology Stack
+
+Backend:
+Supabase (PostgreSQL)
+
+Edge Functions:
+Deno serverless functions
+
+Frontend:
+React + TypeScript
+
+Realtime:
+Supabase Realtime
+
+UI:
+shadcn components
+
+---
+
+# System Goals
+
+The product must:
+
+- respond instantly to emergency events
+- protect user privacy
+- maintain secure data access
+- provide reliable location updates
