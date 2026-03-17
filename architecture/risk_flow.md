@@ -1,4 +1,3 @@
-```markdown
 # Astra Risk Detection Flow
 
 ```mermaid
@@ -13,4 +12,4 @@ G -- No --> E
 G -- Yes --> H[Prompt user: Are you safe?]
 H --> I{User responds?}
 I -- Yes --> J[Mark as safe]
-I -- No --> K[Trigger alert to Safety Circle]
+I -- No --> K[Trigger alert to Safety Circle] 
