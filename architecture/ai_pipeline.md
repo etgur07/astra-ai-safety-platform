@@ -16,8 +16,3 @@ F -->|Medium| H[Prompt User: Are you safe?]
 F -->|High| I[Trigger Emergency Alert]
 
 I --> J[Notify Safety Circle]
-
-
-Implementation Note
-
-The AI risk scoring engine is implemented in Python and can be deployed as a microservice or integrated into backend workflows.
