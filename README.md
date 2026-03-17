@@ -27,3 +27,12 @@ Early-stage research prototype and MVP architecture.
 
 Elif Gur  
 Independent Researcher | Tech Entrepreneur
+
+## Repository Structure
+
+- `/backend-api` → MVP backend prototype
+- `/whitepaper` → Astra white paper materials
+- `/research` → conference paper and academic drafts
+- `/architecture` → system diagrams and technical notes
+- `/prototype` → UX prototype link and product design
+- `/ai-model` → AI risk detection concept and pseudocode
