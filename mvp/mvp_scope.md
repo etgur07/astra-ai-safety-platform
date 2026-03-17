@@ -1,15 +1,16 @@
 # Astra MVP Scope
 
-Astra is a personal safety platform designed to help protect women and teenage girls through trusted safety networks, real-time location sharing, and emergency alert systems.
+Astra is a proactive personal safety platform designed to protect women and teenage girls through trusted safety networks, real-time monitoring, and AI-assisted risk detection.
 
-This document defines the Minimum Viable Product (MVP) feature scope.
+This document defines the Minimum Viable Product (MVP) scope and core system capabilities.
 
 ---
 
 # Core MVP Features
 
 ## 1. User Accounts
-Users can create secure accounts and manage personal profile information.
+
+Users can create secure accounts and manage their personal profiles.
 
 Capabilities:
 - Email authentication
@@ -23,13 +24,13 @@ profiles
 
 ## 2. Safety Circle (Trusted Contacts)
 
-Users can add trusted contacts who will be notified during emergencies.
+Users can define trusted contacts who will receive emergency alerts.
 
 Capabilities:
-- Add emergency contact
-- Remove contact
+- Add safety contact
+- Remove safety contact
 - Mark contacts as emergency contacts
-- Store phone/email
+- Store phone and email information
 
 Database:
 safety_contacts
@@ -38,11 +39,11 @@ safety_contacts
 
 ## 3. Panic Alerts
 
-A one-tap emergency alert system.
+A one-tap emergency alert system that instantly notifies trusted contacts.
 
 Capabilities:
 - Create panic alert
-- Send GPS coordinates
+- Capture GPS location
 - Attach optional message
 - Notify safety contacts
 
@@ -56,13 +57,13 @@ trigger-panic
 
 ## 4. Location Sharing
 
-Users can temporarily share their location with trusted contacts.
+Users can temporarily share their real-time location with trusted contacts.
 
 Capabilities:
 - Start location session
-- Update location
+- Update location in real time
 - End location session
-- Automatic expiration
+- Automatic session expiration
 
 Database:
 location_sessions
@@ -73,12 +74,15 @@ Realtime updates enabled.
 
 ## 5. Safety Check-ins
 
-Scheduled safety check-ins ensure users confirm their safety.
+Users can schedule check-ins to confirm their safety status.
 
 Capabilities:
 - Create scheduled check-in
-- Respond safe / need help
+- Respond with:
+  - safe
+  - need_help
 - Detect missed check-ins
+- Trigger escalation if no response
 
 Database:
 check_ins
@@ -88,25 +92,49 @@ check-in-monitor
 
 ---
 
-# Guardian Mode
+## 6. AI Risk Detection (MVP Layer)
 
-Guardian users (such as parents or trusted adults) can monitor alerts and location sessions for users they are responsible for.
+Astra includes a lightweight AI-based risk detection system implemented using rule-based logic.
 
-Logic:
-is_guardian_of(user_id)
+Purpose:
+To enable proactive safety detection without requiring manual user input.
+
+Capabilities:
+- evaluate missed check-ins
+- detect inactivity or abnormal movement
+- assess time-based risk (e.g., late-night activity)
+- generate dynamic risk scores
+- trigger escalation when thresholds are reached
+
+Technology:
+- Python-based risk scoring engine
+
+Integration:
+- AI evaluates behavioral data from backend
+- supports proactive alerts and user prompts
+
+---
+
+## 7. Guardian Mode
+
+Guardian users (e.g., parents or trusted adults) can monitor safety data.
 
 Capabilities:
 - View active panic alerts
-- View location sessions
+- View real-time location sessions
+- Monitor safety status
+
+Logic:
+is_guardian_of(user_id)
 
 ---
 
 # Realtime Features
 
-The following data streams support realtime updates:
+The system supports real-time updates for:
 
-- panic_alerts
-- location_sessions
+- panic alerts
+- location sessions
 
 Technology:
 Supabase Realtime
@@ -115,16 +143,23 @@ Supabase Realtime
 
 # MVP Goal
 
-The MVP demonstrates that Astra can:
+The Astra MVP demonstrates the ability to:
 
-- create a safety network
-- detect emergency events
-- share location in real time
-- escalate alerts to trusted contacts
+- create a trusted safety network  
+- enable instant emergency alerts  
+- share location in real time  
+- monitor user safety behavior  
+- detect potential risk using AI  
+- escalate alerts proactively  
 
-Future versions may include:
+---
 
-- SMS notification integration
-- AI-based risk detection
-- wearable device integration
-- predictive safety analytics
+# Future Enhancements
+
+The following features are planned for future versions:
+
+- SMS and push notification integration  
+- machine learning-based anomaly detection  
+- route deviation analysis  
+- wearable device integration  
+- predictive safety analytics  
