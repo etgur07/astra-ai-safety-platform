@@ -160,6 +160,7 @@ OR
 This allows Astra to evolve from rule-based logic into a machine learning-driven system.
 
 ---
+
 ## Technology Stack
 
 Backend: Supabase (PostgreSQL)  
