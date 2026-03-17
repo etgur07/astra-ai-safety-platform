@@ -71,6 +71,45 @@ Fields:
 
 ---
 
+## verification_records
+Stores identity verification data.
+
+Suggested fields:
+- id
+- user_id
+- verification_type
+- status
+- created_at
+
+---
+
+## evidence_records
+Stores metadata for captured evidence.
+
+Suggested fields:
+- id
+- user_id
+- evidence_type
+- file_url
+- latitude
+- longitude
+- created_at
+
+---
+
+## alert_recipients
+Stores emergency delivery records for trusted contacts.
+
+Suggested fields:
+- id
+- alert_id
+- contact_id
+- channel
+- status
+- sent_at
+  
+---
+
 ## Relationships
 
 - `profiles.id` → parent user record
