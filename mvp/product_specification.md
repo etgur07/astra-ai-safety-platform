@@ -115,24 +115,59 @@ Users can only modify their own records.
 Guardian users can read safety data for monitored users.
 
 ---
+## AI and Risk Detection Layer
 
-# Technology Stack
+The Astra system includes an AI-driven risk detection component implemented in Python.
 
-Backend:
-Supabase (PostgreSQL)
+This layer is responsible for analyzing behavioral patterns and detecting potential safety risks.
 
-Edge Functions:
-Deno serverless functions
+### Technology
+- Python
+- Data processing (NumPy / Pandas - optional)
+- Rule-based scoring system (MVP)
+- Future: Machine Learning models
 
-Frontend:
-React + TypeScript
+### Inputs
+- GPS coordinates
+- timestamp
+- movement speed
+- route history
+- safety mode status
+- check-in response status
 
-Realtime:
-Supabase Realtime
+### Outputs
+- risk score
+- anomaly detection flag
+- safety prompt trigger
+- emergency alert trigger
 
-UI:
-shadcn components
+### Responsibilities
+- detect abnormal movement patterns
+- evaluate missed check-ins
+- calculate risk score
+- trigger escalation logic
 
+### Integration
+
+The AI layer can be integrated with the backend via:
+
+- API endpoint (Python microservice)
+OR
+- Edge function trigger
+OR
+- scheduled background process
+
+This allows Astra to evolve from rule-based logic into a machine learning-driven system.
+
+---
+## Technology Stack
+
+Backend: Supabase (PostgreSQL)  
+Edge Functions: Deno serverless functions  
+AI Layer: Python (risk detection & scoring engine)  
+Frontend: React + TypeScript  
+Realtime: Supabase Realtime  
+UI: shadcn components  
 ---
 
 # System Goals
