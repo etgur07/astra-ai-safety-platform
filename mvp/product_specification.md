@@ -162,7 +162,6 @@ This allows Astra to evolve from rule-based logic into a machine learning-driven
 ---
 
 ## Technology Stack
-
 Backend: Supabase (PostgreSQL)  
 Edge Functions: Deno serverless functions  
 AI Layer: Python (risk detection & scoring engine)  
