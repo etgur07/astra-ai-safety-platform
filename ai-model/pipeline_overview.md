@@ -12,3 +12,5 @@
 - high risk → trigger alert  
 
 7. Alert sent to Safety Circle
+
+This pipeline is intended to connect the mobile safety workflow with the Python-based risk scoring engine and future machine learning modules.
