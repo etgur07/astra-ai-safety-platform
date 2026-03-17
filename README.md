@@ -23,10 +23,6 @@ Astra explores how artificial intelligence and mobile technologies can improve p
 
 Early-stage research prototype and MVP architecture.
 
-## Author
-
-Elif Gur  
-Independent Researcher | Tech Entrepreneur
 
 ## Repository Structure
 
@@ -36,3 +32,9 @@ Independent Researcher | Tech Entrepreneur
 - `/architecture` → system diagrams and technical notes
 - `/prototype` → UX prototype link and product design
 - `/ai-model` → AI risk detection concept and pseudocode
+
+## Author
+
+Elif Gur  
+Independent Researcher | Tech Entrepreneur
+
