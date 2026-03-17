@@ -257,20 +257,85 @@ Purpose:
 ## 8. AI Risk Evaluation
 
 ### POST /ai/risk-score
-
-Evaluates user safety risk based on behavioral data.
+Evaluates user safety risk based on behavioral and contextual data.
 
 Request body:
 - movement_speed
 - check_in_status
 - time_of_day
 - safety_mode
+- inactivity_duration
 
----
+Response:
+- risk_score
+- risk_level
+- recommended_action
 
 Response:
 - risk_score
 - risk_level (low / medium / high)
+
+---
+
+## 9. Evidence Capture
+
+### POST /evidence/audio/start
+Starts emergency audio recording.
+
+### POST /evidence/video/start
+Starts emergency video recording.
+
+### POST /evidence/photo/capture
+Captures emergency photo evidence.
+
+### POST /evidence/upload
+Uploads evidence with metadata.
+
+Request body:
+- user_id
+- evidence_type
+- timestamp
+- latitude
+- longitude
+- file_reference
+
+---
+
+## 10. Trusted Contact Alerts
+
+### GET /incoming-alerts
+Returns incoming alerts for trusted contacts.
+
+### GET /incoming-alerts/{id}
+Returns emergency alert detail view for trusted contacts.
+
+### POST /incoming-alerts/{id}/acknowledge
+Marks the alert as seen.
+
+### POST /incoming-alerts/{id}/call-user
+Starts user call action.
+
+### POST /incoming-alerts/{id}/call-911
+Starts emergency services call action.
+
+### POST /incoming-alerts/{id}/open-chat
+Opens live safety chat session.
+
+---
+
+## 11. Identity Verification
+
+### POST /verification/selfie
+Uploads selfie verification image.
+
+### POST /verification/id
+Uploads ID verification document.
+
+### GET /verification/status
+Returns verification status.
+---
+
+
 
 ## MVP API Goal
 
