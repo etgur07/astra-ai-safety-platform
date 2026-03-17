@@ -29,3 +29,10 @@ class CheckIn:
         self.user_id = user_id
         self.status = status
         self.due_at = due_at
+
+
+class RiskScore:
+    def __init__(self, user_id, score, level):
+        self.user_id = user_id
+        self.score = score
+        self.level = level
