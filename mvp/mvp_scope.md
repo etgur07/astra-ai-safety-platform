@@ -129,6 +129,20 @@ is_guardian_of(user_id)
 
 ---
 
+## 8. Emergency Evidence Capture
+
+The system supports automatic and manual evidence collection during emergency situations.
+
+Capabilities:
+
+audio recording
+video recording
+photo capture
+automatic trigger during high-risk detection
+secure cloud storage
+timestamp and location tagging
+
+
 # Realtime Features
 
 The system supports real-time updates for:
@@ -138,20 +152,6 @@ The system supports real-time updates for:
 
 Technology:
 Supabase Realtime
-
----
-
-### Emergency Evidence Capture
-
-The system supports automatic and manual evidence collection during emergency situations.
-
-Capabilities:
-- audio recording
-- video recording
-- photo capture
-- automatic trigger during high-risk detection
-- secure cloud storage
-- timestamp and location tagging
 
 ---
 
