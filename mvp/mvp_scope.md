@@ -135,12 +135,12 @@ The system supports automatic and manual evidence collection during emergency si
 
 Capabilities:
 
-audio recording
-video recording
-photo capture
-automatic trigger during high-risk detection
-secure cloud storage
-timestamp and location tagging
+- audio recording
+- video recording
+- photo capture
+- automatic trigger during high-risk detection
+- secure cloud storage
+- timestamp and location tagging
 
 
 # Realtime Features
