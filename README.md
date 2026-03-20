@@ -1,241 +1,259 @@
-# Astra – AI-Powered Personal Safety Platform
+# ASTRA – AI-Enabled Personal Safety Platform
 
-Astra is an AI-driven personal safety platform designed to provide real-time protection, proactive risk detection, and emergency response support.
+ASTRA is an AI-enabled personal safety platform designed to support real-time protection, proactive risk awareness, and emergency-response coordination through a mobile-first safety architecture.
 
-Inspired by systems like KADES, Astra extends safety beyond government-controlled environments by integrating artificial intelligence, real-time data, and trusted social networks into a unified safety ecosystem.
+Unlike conventional panic-button applications that depend only on manual activation, ASTRA combines **user-initiated emergency alerting** with **AI-assisted behavioral and contextual risk assessment**. The platform is intended to function both in immediate emergency situations and in scenarios where risk may build gradually through missed check-ins, abnormal inactivity, route deviation, or unusual behavioral patterns.
 
----
-
-## 🌍 Vision
-
-Astra aims to become a proactive safety intelligence system that protects individuals—especially women and teenagers—by detecting potential danger before it escalates and enabling rapid, intelligent response during emergencies.
+ASTRA is designed as a hybrid safety system that integrates emergency response workflows, trusted-contact communication, evidence capture, contextual safety monitoring, and a future-facing anomaly detection layer into a unified ecosystem.
 
 ---
 
-## 🚨 Core Features
+## Vision
 
-### 🔴 Panic Alert System
+ASTRA aims to become a proactive safety intelligence platform that helps protect individuals—especially women, teenagers, and other vulnerable users—through faster emergency response, contextual risk awareness, and intelligent escalation support.
+
+---
+
+## Core Safety Philosophy
+
+ASTRA is built around two complementary safety modes:
+
+1. **Manual emergency activation**, where users can trigger immediate assistance through a panic alert or safety action.
+2. **AI-assisted risk detection**, where the system evaluates contextual, temporal, and behavioral signals to identify elevated concern and support adaptive escalation.
+
+This hybrid structure reflects the practical reality that safety systems should not rely exclusively on either manual input or full automation. Instead, ASTRA is designed to combine both approaches in a user-centered and operationally realistic way.
+
+---
+
+## Core Features
+
+### Panic Alert System
 - One-tap emergency trigger
-- Instantly notifies trusted contacts
-- Sends live GPS location
+- Instant alert creation
+- Trusted-contact notification
+- Live GPS location sharing
 
-### 📞 Call 911 Integration
-- Direct emergency call access
-- Suggested escalation during high-risk events
+### Emergency Escalation Support
+- Direct emergency-call access
+- Suggested escalation during high-risk situations
+- Future interoperability path toward NG911-style integration
 
-### 👥 Safety Circle (Trusted Contacts)
+### Safety Circle (Trusted Contacts)
 - Add and manage emergency contacts
-- Multi-channel alert delivery (push, SMS, call)
+- Multi-channel alert delivery
+- Real-time visibility during emergencies
 
-### 📍 Real-Time Location Sharing
+### Real-Time Location Sharing
 - Temporary live location sessions
-- Share movement with trusted contacts
-- Automatic expiration
+- Movement visibility for trusted contacts
+- Automatic expiration for privacy protection
 
-### ⏱ Safety Check-In System
+### Safety Check-In System
 - Scheduled safety confirmations
-- Missed check-ins trigger escalation
+- Missed check-ins increase concern level
+- Escalation if no user response is received
 
-### 🛡 Guardian Mode
+### Guardian Mode
 - Designed for teens and monitored users
-- Guardian-level visibility and alerts
+- Guardian-level safety visibility
+- Alert escalation for missed confirmation or abnormal conditions
 
-### 🔐 Identity Verification
-- Selfie and optional ID verification
-- Improves trust within safety network
-
----
-
-## 🧠 AI-Powered Safety Layer
-
-Astra integrates a Python-based AI risk detection engine.
-
-### AI Capabilities:
-- Detect unusual movement patterns
-- Identify missed check-ins
-- Analyze inactivity and time-based risk
-- Evaluate behavioral anomalies
-
-### Risk Levels:
-- Low → continue monitoring
-- Medium → safety prompt ("Are you safe?")
-- High → emergency escalation
+### Identity Verification
+- Selfie verification
+- Optional ID verification
+- Added trust within the safety network
 
 ---
 
-## 🎥 Evidence Capture System
+## AI-Powered Safety Layer
 
-Astra includes a built-in emergency evidence system:
+ASTRA includes a planned and evolving AI-based safety intelligence layer designed to complement emergency alert workflows.
 
-- Audio recording
-- Video recording
-- Photo capture
-- Automatic capture during high-risk events
-- Timestamp and GPS tagging
-- Secure cloud storage
+This layer is intended to support:
 
-This feature enables users to preserve critical evidence during emergency situations.
+- missed check-in detection
+- unusual inactivity analysis
+- time-based risk evaluation
+- route deviation awareness
+- behavioral anomaly detection
+- adaptive risk scoring
+
+Rather than replacing manual emergency input, the AI layer is designed to **support earlier interpretation of elevated concern** and improve the platform’s ability to respond when users are unable to act immediately.
+
+### Risk Levels
+- **Low Risk** → continue background monitoring
+- **Medium Risk** → prompt user verification
+- **High Risk** → trigger emergency escalation workflow
 
 ---
 
-## 💬 Communication Layer
+## Evidence Capture System
+
+ASTRA includes a built-in emergency evidence subsystem to support documentation during critical events.
+
+Features include:
+- audio recording
+- video recording
+- photo capture
+- timestamping
+- GPS tagging
+- secure cloud storage
+
+This subsystem is intended to preserve safety-relevant evidence under emergency conditions and support trusted-contact or emergency-response workflows.
+
+---
+
+## Communication Layer
 
 ### Live Chat
 - Real-time communication with trusted contacts
 
-### AI Safety Assistant
-- Chat + voice interaction
-- Hands-free support in emergency scenarios
+### Voice and Hands-Free Safety Support
+- Voice-enabled interaction
+- Reduced dependency on typing under stress
+- Future AI safety assistant support
 
-### Voice Input Support
-- Users can interact without typing
-- Critical for high-stress situations
+### Multi-Channel Notification
+- Push notification
+- In-app alert
+- SMS fallback
+- Voice-call escalation
 
----
-
-## 🚨 Trusted Contact Alert System
-
-When an emergency is triggered, trusted contacts receive:
-
-- Emergency alert notification
-- Live location access
-- Risk level status
-- Evidence capture indicators
-- Missed check-in alerts
-
-### Available Actions:
-- View live location
-- Call the user
-- Call 911
-- Open live chat
+This layered communication design is intended to improve delivery reliability in urgent situations.
 
 ---
 
-## 🧩 System Architecture
+## Trusted Contact Alert System
 
-### Backend
-- Supabase (PostgreSQL)
-- Row Level Security (RLS)
-- Auth system with user profiles
+When an emergency is triggered or the system identifies elevated concern, trusted contacts may receive:
 
-### Edge Functions (Deno)
-- trigger-panic
-- check-in-monitor
+- emergency alert notification
+- live location access
+- risk-level information
+- missed check-in notification
+- evidence-capture status indicators
 
-### AI Layer
-- Python-based risk scoring engine
-- FastAPI microservice (planned)
+Available response actions may include:
+- viewing live location
+- calling the user
+- opening live chat
+- contacting emergency services
+
+---
+
+## System Architecture
 
 ### Frontend
 - React + TypeScript
-- Mobile-first UI design
+- Mobile-first UI
+
+### Backend
+- Supabase
+- PostgreSQL
+- Row Level Security (RLS)
+- Authentication and user-profile layer
+- Edge Functions for operational workflows
+
+### AI Layer
+- Python-based risk scoring engine
+- Anomaly detection and escalation logic
+- FastAPI microservice planned
 
 ### Realtime
 - Supabase Realtime subscriptions
+- Live alert state updates
+- Contact notification workflows
 
 ---
 
-## 🔔 Notification Architecture
-
-Multi-channel alert system:
-
-1. Push Notification
-2. In-app alert
-3. SMS fallback
-4. Voice call escalation
-
-Ensures delivery even in critical scenarios.
-
----
-
-## 🔄 User Flows
+## User Flows
 
 ### Panic Flow
-User → Panic Button → Alert Created → Contacts Notified → AI Evaluates → Escalation
+User → Panic Button → Alert Created → Contacts Notified → Risk Context Updated → Escalation Workflow
 
 ### Check-In Flow
-Timer → No Response → Risk Increase → Alert Triggered
+Timer → No Response → Risk Increase → User Prompt → Alert Triggered
 
-### AI Flow
-Behavior Data → Risk Engine → Decision Output → System Action
-
----
-
-## 📊 Database Structure
-
-Core tables:
-
-- profiles
-- safety_contacts
-- panic_alerts
-- location_sessions
-- check_ins
-
-Additional:
-
-- evidence_records
-- alert_recipients
-- verification_records
+### AI-Assisted Flow
+Behavioral / contextual signals → Risk engine → Decision output → System action
 
 ---
 
-## 🎯 System Goals
+## Database Structure
 
-Astra is designed to:
+### Core Tables
+- `profiles`
+- `safety_contacts`
+- `panic_alerts`
+- `location_sessions`
+- `check_ins`
 
-- Respond instantly to emergency events
-- Detect risk proactively using AI
-- Preserve critical evidence
-- Protect user privacy
-- Ensure reliable communication
-- Support vulnerable populations
-
----
-
-## 🔬 Future Development
-
-- Machine learning-based anomaly detection
-- Predictive safety modeling
-- Route deviation analysis
-- Safer route recommendations
-- Integration with public safety systems (NG911)
+### Additional Tables
+- `evidence_records`
+- `alert_recipients`
+- `verification_records`
 
 ---
 
-## ⚖️ Ethical Considerations
+## System Goals
 
-Astra prioritizes:
+ASTRA is designed to:
+- respond quickly to emergency events
+- support proactive risk interpretation
+- preserve safety-relevant evidence
+- protect user privacy
+- ensure reliable communication
+- support vulnerable populations through adaptive safety workflows
 
-- user privacy
-- secure data handling
+---
+
+## Ethical Commitments
+
+ASTRA prioritizes:
 - consent-based data collection
-- responsible AI usage
+- secure data handling
+- privacy-aware design
+- responsible AI use
+- proportional escalation
+- user autonomy
 
 ---
 
-## 🚀 Positioning
+## Research and Development Direction
 
-Astra is not just a panic button app.
-
-It is:
-
-> An AI-powered personal safety intelligence platform designed for real-world risk detection and emergency response.
-
----
-
-## 📁 Project Structure
-
-<pre> ## 📁 Project Structure ``` astra-ai-safety-platform/ │ ├── mvp/ ├── backend-api/ ├── ai-model/ ├── architecture/ ├── research/ ├── docs/ │ └── README.md ``` </pre>
+Future development includes:
+- machine-learning-based anomaly detection
+- route deviation modeling
+- contextual safety scoring
+- predictive safety modeling
+- safer-route recommendations
+- deeper wearable integration
+- emergency-system interoperability
 
 ---
 
-## 👩‍💻 Author
+## Positioning
 
-Developed as part of an advanced safety technology initiative combining AI, real-time systems, and human-centered design.
+ASTRA is not only a panic button application.
+
+It is a hybrid personal safety platform that combines:
+- emergency alerting
+- contextual risk awareness
+- behavioral anomaly detection
+- trusted-contact coordination
+- intelligent escalation logic
 
 ---
 
-## 📌 Status
+## Project Structure
 
-MVP + AI integration + system architecture complete  
-Actively expanding toward research, deployment, and real-world applications
+```text
+astra-ai-safety-platform/
+│
+├── mvp/
+├── backend-api/
+├── ai-model/
+├── architecture/
+├── research/
+├── docs/
+└── README.md
