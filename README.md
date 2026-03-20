@@ -250,10 +250,12 @@ It is a hybrid personal safety platform that combines:
 ```text
 astra-ai-safety-platform/
 │
-├── mvp/
-├── backend-api/
-├── ai-model/
-├── architecture/
-├── research/
-├── docs/
-└── README.md
+├── ai-model/                 # AI risk scoring, anomaly detection, and model logic
+├── architecture/             # system diagrams, pipeline visuals, and technical design assets
+├── backend-api/              # backend services, APIs, and server-side workflows
+├── mvp/                      # minimum viable product implementation
+├── prototype/                # prototype experiments, early builds, and UI/system testing assets
+├── research/                 # research materials, drafts, and supporting academic content
+├── whitepaper/               # whitepaper and publication-oriented documents
+├── eb2_research_narrative.md # immigration/research positioning narrative
+└── README.md                 # project overview and documentation
